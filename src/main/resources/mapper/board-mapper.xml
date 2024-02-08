@@ -11,4 +11,12 @@
         select id, boardTitle, boardWriter, boardHits, date_format(createdAt, "%Y-%m-%d") as createdAt
         from board_table order by id desc
     </select>
+    <update id="updateHits" parameterType="Long">
+        update board_table set boardHits=boardHits+1 where id=#{id}
+    </update>
+    <select id="findById" parameterType="Long" resultType="board">
+        select id, boardTitle, boardWriter, boardPass, boardContents, boardHits,
+        date_format(createdAt, "%Y-%m-%d %H:%i:%s") as createdAt
+        from board_table where id=#{id}
+    </select>
 </mapper>
