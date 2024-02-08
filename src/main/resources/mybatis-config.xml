@@ -4,5 +4,6 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.codingrecipe.board.dto.BoardDTO" alias="board"></typeAlias>
+        <typeAlias type="com.codingrecipe.board.dto.BoardFileDTO" alias="boardFile"></typeAlias>
     </typeAliases>
 </configuration>
