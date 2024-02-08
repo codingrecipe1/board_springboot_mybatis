@@ -8,6 +8,7 @@
             values(#{boardTitle}, #{boardWriter}, #{boardPass}, #{boardContents})
     </insert>
     <select id="findAll" resultType="board">
-        select * from board_table order by id desc
+        select id, boardTitle, boardWriter, boardHits, date_format(createdAt, "%Y-%m-%d") as createdAt
+        from board_table order by id desc
     </select>
 </mapper>
