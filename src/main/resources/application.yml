@@ -1,0 +1,17 @@
+# server port
+server:
+  port: 8080
+
+# database
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_codingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: user_codingrecipe
+    password: 1234
+
+# mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+
