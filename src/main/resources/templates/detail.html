@@ -44,10 +44,12 @@
 <button onclick="updateReq()">수정</button>
 <button onclick="deleteReq()">삭제</button>
 </body>
-<script>
+<script th:inline="javascript">
     const listReq = () => {
         location.href = "/list";
     }
-
+    const updateReq = () => {
+        location.href = `/update/[[${board.id}]]`;
+    }
 </script>
 </html>
